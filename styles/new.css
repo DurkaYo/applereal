@@ -1,0 +1,369 @@
+/* Top banner */
+.intro-banner {
+  overflow: hidden;
+  position: relative;
+  border-radius: 24px;
+  box-sizing: border-box;
+  border: 1px solid #EAECF1;
+  background: transparent no-repeat top right;
+  background-size: cover;
+  width: 100%;
+  min-height: 546px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.intro-banner--rent {
+  background-image: url('../images/rent/banner.jpg');
+}
+.intro-banner__outer {
+  padding-top: 48px;
+  padding-bottom: 58px;
+}
+.intro-banner__inner {
+  max-width: 600px;
+  margin-left: 104px;
+}
+.intro-banner__title {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.32;
+  color: #000000;
+}
+.intro-banner__title--accent {
+  color: #2C5352;
+}
+.intro-banner__text {
+  color: #282828;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.44;
+  margin-top: 28px;
+}
+/* Top banner */
+/* How does this work? */
+.does-work {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 23px 19px;
+}
+.does-work__outer {
+  padding-top: 130px;
+  padding-bottom: 184px;
+  box-shadow: inset 0px -30px 104px -100px #B2BCC2, inset 0px 60px 104px -100px #B2BCC2;
+}
+.does-work__checking-point {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+.does-work__checking-point__icon {
+  min-width: 26px;
+  width: 26px;
+  height: 26px;
+  background: transparent url('../images/rent/point.svg') no-repeat center center;
+  background-size: 100% auto;
+  margin-top: 6px;
+}
+.does-work__checking-point__text {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #2C5352;
+}
+.does-work__checking-point--one-line .does-work__checking-point__icon {
+  margin-top: 0;
+}
+.does-work__checking-header {
+  padding: 38px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  border-radius: 20px 20px 0 0;
+}
+.does-work__checking-footer {
+  background-color: #E9F5F6;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 24px;
+  padding-top: 58px;
+  padding-bottom: 58px;
+}
+/* How does this work? */
+/* why are we? */
+.why-are__outer {
+  padding-top: 116px;
+  padding-bottom: 90px;
+}
+.why-are__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 40px;
+}
+.why-are__line--reverse .why-are__picture {
+  order: -1;
+}
+.why-are__line + .why-are__line {
+  margin-top: 60px;
+}
+.why-are__content {
+  max-width: 540px;
+  width: 100%;
+}
+.why-are__content-title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.14;
+  color: #000000;
+}
+.why-are__content-text {
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: rgba(40, 40, 40, 0.8);
+  margin-top: 18px;
+}
+.why-are__picture-image {
+  max-width: 635px;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+/* why are we? */
+/* What is the price */
+.what-price__outer {
+  padding-top: 175px;
+  padding-bottom: 175px;
+}
+.what-price__inner {
+  border: 1px solid #D5E1E1;
+  background-color: #FFFFFF;
+  border-radius: 24px;
+}
+.what-price__line {
+  display: grid;
+  grid-template-columns: 1fr 0.245fr;
+  grid-template-rows: auto;
+}
+.what-price__line:nth-child(2n) {
+  background-color: #F4FAFB;
+}
+.what-price__line:first-of-type {
+  border-radius: 24px 24px 0 0;
+}
+.what-price__line:last-of-type {
+  border-radius: 0 0 24px 24px;
+}
+.what-price__text {
+  padding: 25px 40px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.73;
+}
+.what-price__text-sub {
+  font-size: 17px;
+  line-height: 2.24;
+}
+.what-price__text--title {
+  font-weight: 600;
+}
+.what-price__text-mobile {
+  display: none;
+}
+.what-price__point {
+  padding: 32px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #D5E1E1;
+}
+.what-price__point--percentage {
+  padding: 12px 0;
+}
+.what-price__percentage {
+  text-align: center;
+}
+.what-price__percentage-number {
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1.09;
+  color: #000000;
+}
+.what-price__percentage-percent {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  top: -8px;
+  right: -2px;
+}
+.what-price__percentage-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2;
+}
+/* What is the price */
+/* We are close */
+.we-close__outer {
+  padding-top: 119px;
+  padding-bottom: 125px;
+}
+.we-close__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.we-close__image {
+  max-width: 596px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.we-close__content {
+  max-width: 606px;
+  width: 100%;
+}
+.we-close__content-primary {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.36;
+  margin-top: 40px;
+}
+.we-close__content-secondary {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.58;
+  margin-top: 16px;
+}
+/* We are close */
+/* We are also ready */
+.we-ready__outer {
+  padding-top: 96px;
+  padding-bottom: 127px;
+  background-color: rgba(233, 245, 246, 0.5);
+}
+.we-ready__header {
+  margin-bottom: 40px;
+}
+.we-ready__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 17px;
+}
+/* We are also ready */
+/* bottom feedback form */
+.bottom-feedback__outer {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.bottom-feedback__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bottom-feedback__header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.bottom-feedback__field {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 33px;
+  width: 100%;
+  max-width: 887px;
+}
+.bottom-feedback__field--btn {
+  height: 96px;
+  font-size: 22px;
+}
+.bottom-feedback__field--input {
+  height: 96px;
+  font-size: 22px;
+  background-color: #FFFFFF;
+}
+/* bottom feedback form */
+/* Tile counter */
+.tile-counter {
+  padding: 38px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 0 17px rgba(0, 0, 0, 0.04);
+}
+.tile-counter__title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.55;
+  color: #000000;
+  margin-top: 32px;
+}
+.tile-counter__text {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.65;
+  color: rgba(40, 40, 40, 0.8);
+  margin-top: 12px;
+}
+.tile-counter--advertise {
+  grid-column: span 2;
+  background: transparent url('../images/rent/advertise.jpeg') no-repeat center right;
+  background-size: cover;
+  border: 1px solid #ffffff;
+}
+.tile-counter--advertise .tile-counter__text {
+  max-width: 450px;
+}
+.tile-counter--checking {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-column: span 2;
+  padding: 0;
+}
+.tile-counter--checking .tile-counter__title {
+  margin-top: 0;
+}
+.tile-counter--checking .tile-counter__text {
+  max-width: 600px;
+}
+.tile-counter__number {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1;
+  width: 114px;
+  height: 114px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2C5352;
+  background-color: #E9F5F6;
+}
+.tile-counter__number--reverse {
+  background-color: #FFFFFF;
+}
+/* Tile counter */
+/* Header line */
+.header-line {
+  margin-bottom: 62px;
+}
+.header-line__sub-title {
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.65;
+  color: rgba(0, 0, 0, 0.61);
+  margin: 24px 0 0 0;
+  padding: 0;
+}
+/* Header line */
+/*# sourceMappingURL=new.css.map */

@@ -1,0 +1,470 @@
+/* Top banner */
+.intro-banner {
+  overflow: hidden;
+  position: relative;
+  border-radius: 24px;
+  box-sizing: border-box;
+  border: 1px solid #EAECF1;
+  background: transparent no-repeat top right;
+  background-size: cover;
+  width: 100%;
+  min-height: 546px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &--rent {
+    background-image: url('../images/rent/banner.jpg');
+  }
+
+  &__outer {
+    padding-top: 48px;
+    padding-bottom: 58px;
+  }
+
+  &__inner {
+    max-width: 600px;
+    margin-left: 104px;
+  }
+
+  &__title {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.32;
+    color: #000000;
+
+    &--accent {
+      color: #2C5352;
+    }
+  }
+
+  &__text {
+    color: #282828;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.44;
+    margin-top: 28px;
+  }
+
+}
+/* Top banner */
+
+/* How does this work? */
+.does-work {
+
+  &__outer {
+    padding-top: 130px;
+    padding-bottom: 184px;
+    box-shadow: inset 0px -30px 104px -100px #B2BCC2, inset 0px 60px 104px -100px #B2BCC2;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 23px 19px;
+
+  &__checking {
+
+    &-point {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 16px;
+
+      &__icon {
+        min-width: 26px;
+        width: 26px;
+        height: 26px;
+        background: transparent url('../images/rent/point.svg') no-repeat center center;
+        background-size: 100% auto;
+        margin-top: 6px;
+      }
+
+      &__text {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: #2C5352;
+      }
+
+      &--one-line {
+        .does-work__checking-point__icon {
+          margin-top: 0;
+        }
+      }
+
+    }
+
+    &-header {
+      padding: 38px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 24px;
+      border-radius: 20px 20px 0 0;
+    }
+
+    &-footer {
+      background-color: #E9F5F6;
+      border-radius: 0 0 20px 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 24px;
+      padding-top: 58px;
+      padding-bottom: 58px;
+    }
+  }
+
+}
+/* How does this work? */
+
+/* why are we? */
+.why-are {
+
+  &__outer {
+    padding-top: 116px;
+    padding-bottom: 90px;
+  }
+
+  &__line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 40px;
+
+    &--reverse {
+      .why-are__picture {
+        order: -1;
+      }
+    }
+
+    & + .why-are__line {
+      margin-top: 60px;
+    }
+  }
+
+  &__content {
+    max-width: 540px;
+    width: 100%;
+
+    &-title {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.14;
+      color: #000000;
+    }
+
+    &-text {
+      font-size: 23px;
+      font-weight: 500;
+      line-height: 1.35;
+      color: rgba(40, 40, 40, 0.8);
+      margin-top: 18px;
+    }
+  }
+
+  &__picture {
+
+    &-image {
+      max-width: 635px;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+  }
+
+}
+/* why are we? */
+
+/* What is the price */
+.what-price {
+
+  &__outer {
+    padding-top: 175px;
+    padding-bottom: 175px;
+  }
+
+  &__inner {
+    border: 1px solid #D5E1E1;
+    background-color: #FFFFFF;
+    border-radius: 24px;
+  }
+
+  &__line {
+    display: grid;
+    grid-template-columns: 1fr .245fr;
+    grid-template-rows: auto;
+
+    &:nth-child(2n) {
+      background-color: #F4FAFB;
+    }
+
+    &:first-of-type {
+      border-radius: 24px 24px 0 0;
+    }
+
+    &:last-of-type {
+      border-radius: 0 0 24px 24px;
+    }
+  }
+
+  &__text {
+    padding: 25px 40px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.73;
+
+    &-sub {
+      font-size: 17px;
+      line-height: 2.24;
+    }
+
+    &--title {
+      font-weight: 600;
+    }
+
+    &-mobile {
+      display: none;
+    }
+  }
+
+  &__point {
+    padding: 32px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #D5E1E1;
+
+    &--percentage {
+      padding: 12px 0;
+    }
+  }
+
+  &__percentage {
+    text-align: center;
+
+    &-number {
+      font-size: 35px;
+      font-weight: 600;
+      line-height: 1.09;
+      color: #000000;
+    }
+
+    &-percent {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      position: relative;
+      top: -8px;
+      right: -2px;
+    }
+
+    &-text {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 2;
+    }
+  }
+
+}
+/* What is the price */
+
+/* We are close */
+.we-close {
+
+  &__outer {
+    padding-top: 119px;
+    padding-bottom: 125px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__image {
+    max-width: 596px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__content {
+    max-width: 606px;
+    width: 100%;
+
+    &-primary {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.36;
+      margin-top: 40px;
+    }
+
+    &-secondary {
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 1.58;
+      margin-top: 16px;
+    }
+
+  }
+
+}
+/* We are close */
+
+/* We are also ready */
+.we-ready {
+
+  &__outer {
+    padding-top: 96px;
+    padding-bottom: 127px;
+    background-color: rgba(233, 245, 246, 0.5);
+  }
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 17px;
+  }
+
+}
+/* We are also ready */
+
+/* bottom feedback form */
+.bottom-feedback {
+
+  &__outer {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__header {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &__field {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 33px;
+    width: 100%;
+    max-width: 887px;
+
+    &--btn {
+      height: 96px;
+      font-size: 22px;
+    }
+
+    &--input {
+      height: 96px;
+      font-size: 22px;
+      background-color: #FFFFFF;
+    }
+  }
+
+}
+/* bottom feedback form */
+
+/* Tile counter */
+.tile-counter {
+
+  padding: 38px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 0 17px rgba(0, 0, 0, 0.04);
+
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.55;
+    color: #000000;
+    margin-top: 32px;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.65;
+    color: rgba(40, 40, 40, 0.8);
+    margin-top: 12px;
+  }
+
+  &--advertise {
+    grid-column: span 2;
+    background: transparent url('../images/rent/advertise.jpeg') no-repeat center right;
+    background-size: cover;
+    border: 1px solid #ffffff;
+
+    .tile-counter__text {
+      max-width: 450px;
+    }
+  }
+
+  &--checking {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-column: span 2;
+    padding: 0;
+
+    .tile-counter__title {
+      margin-top: 0;
+    }
+
+    .tile-counter__text {
+      max-width: 600px;
+    }
+  }
+
+  &__number {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1;
+    width: 114px;
+    height: 114px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2C5352;
+    background-color: #E9F5F6;
+
+    &--reverse {
+      background-color: #FFFFFF;
+    }
+  }
+
+}
+/* Tile counter */
+
+/* Header line */
+.header-line {
+  margin-bottom: 62px;
+
+  &__sub-title {
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 1.65;
+    color: rgba(0, 0, 0, 0.61);
+    margin: 24px 0 0 0;
+    padding: 0;
+  }
+}
+/* Header line */
