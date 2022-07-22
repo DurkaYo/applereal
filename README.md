@@ -10,3 +10,7 @@ html template to apple real
 * сборщиков никаких не юзал -- `html` в чистом первозданном виде
 * в тексте встречается `br` с классами вроде `<br class="br-show-mobile"` -- неплоо бы их не потерять
 * В форме бесплатной оценкии я полностью контролы портировать не стал -- сделал все полями для примера
+
+## Ссылки
+* [Страница аренды](https://durkayo.github.io/applereal/rent.html)
+* [Страница продажи](https://durkayo.github.io/applereal/sale.html)
