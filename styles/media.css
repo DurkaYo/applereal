@@ -1,44 +1,70 @@
-@media only screen and (min-resolution: 2dppx) {
-  /* Top banner */
-  .intro-banner--rent {
-    background-image: url('../images/rent/banner@2x.jpg');
-  }
-  /* Top banner */
-}
 @media screen and (max-width: 1230px) {
   /* How does this work? */
   .does-work__checking-point__text {
     font-size: 16px;
   }
   /* How does this work? */
+  /* What is the price */
+  .what-price__point-label {
+    font-size: 16px;
+  }
+  .what-price__text--sale {
+    font-size: 16px;
+  }
+  /* What is the price */
 }
 @media screen and (max-width: 1023px) {
+  /* media for BR tag */
+  .br-show-tablet {
+    display: block;
+  }
+  /* media for BR tag */
   /* Top banner */
-  .intro-banner {
-    min-height: auto;
-    padding: 43px 15px 51px;
-    justify-content: flex-end;
-    border-radius: 14px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+  .intro-banner__outer--rent {
+    padding-top: 62px;
+    padding-bottom: 36px;
+  }
+  .intro-banner__outer--sale {
+    padding-top: 49px;
+    padding-bottom: 68px;
   }
   .intro-banner--rent {
     background: linear-gradient(0deg, #EAECF1, #EAECF1), linear-gradient(106.38deg, rgba(255, 255, 255, 0.9) 1.12%, rgba(255, 255, 255, 0.441) 44.09%, rgba(255, 255, 255, 0.216) 59.21%), url('../images/rent/banner-transparent.png');
+    min-height: auto;
+    padding: 43px 15px 51px;
+    justify-content: flex-end;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    border-radius: 14px;
   }
-  .intro-banner__outer {
-    padding-top: 36px;
-    padding-bottom: 36px;
-  }
-  .intro-banner__inner {
+  .intro-banner--rent .intro-banner__inner {
     margin-left: 0;
     transform: matrix(-1, 0, 0, 1, 0, 0);
   }
-  .intro-banner__title {
+  .intro-banner--rent .intro-banner__title {
     font-size: 32px;
     line-height: 1.41;
   }
-  .intro-banner__text {
+  .intro-banner--rent .intro-banner__text {
     font-size: 16px;
     line-height: 1.62;
+  }
+  .intro-banner--sale {
+    background-image: url('../images/sale/sale-banner-tablet.jpg');
+    padding: 0 15px;
+    min-height: 369px;
+  }
+  .intro-banner--sale .intro-banner__inner {
+    margin-left: 0;
+  }
+  .intro-banner--sale .intro-banner__title {
+    font-size: 32px;
+    line-height: 1.41;
+  }
+  .intro-banner--sale .intro-banner__title--accent {
+    color: #000000;
+  }
+  .intro-banner--sale .intro-banner__text {
+    margin-top: 25px;
   }
   /* Top banner */
   /* How does this work? */
@@ -105,6 +131,9 @@
     background-color: transparent;
     border-radius: 14px;
   }
+  .what-price__inner--sale {
+    border-color: rgba(213, 225, 225, 0.4);
+  }
   .what-price__line {
     grid-template-columns: 1fr 0.245fr;
   }
@@ -117,7 +146,53 @@
   .what-price__line:last-of-type {
     border-radius: 0 0 14px 14px;
   }
+  .what-price__line--sale {
+    grid-template-columns: 1fr 0.245fr 0.245fr;
+  }
+  .what-price__line--sale .what-price__text {
+    font-size: 16px;
+  }
+  .what-price__line--sale .what-price__text-sub {
+    font-size: 12px;
+  }
+  .what-price__line--sale .what-price__image {
+    width: 23px;
+    height: auto;
+  }
+  .what-price__line--sale .what-price__percentage-number {
+    font-size: 30px;
+  }
+  .what-price__line--sale .what-price__point {
+    border-left-color: rgba(213, 225, 225, 0.4);
+  }
+  .what-price__text {
+    padding: 25px;
+  }
   /* What is the price */
+  /* free estimate */
+  .free-estimate__outer {
+    background-image: url('../images/sale/sale-form-tablet.jpg');
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  .free-estimate__inner {
+    border-radius: 13px;
+  }
+  .free-estimate__header {
+    font-size: 28px;
+    border-radius: 13px 13px 0 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .free-estimate__content {
+    padding: 40px;
+    border-radius: 0 0 13px 13px;
+  }
+  .free-estimate__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px 20px;
+  }
+  /* free estimate */
   /* We are close */
   .we-close__outer {
     padding-top: 55px;
@@ -200,20 +275,63 @@
   }
   /* Header line */
 }
+@media screen and (max-width: 991px) {
+  /* What is the price */
+  .what-price__point-label {
+    font-size: 14px;
+  }
+  .what-price__text--sale {
+    font-size: 14px;
+  }
+  /* What is the price */
+}
 @media screen and (max-width: 767px) {
+  /* media for BR tag */
+  .br-show-mobile {
+    display: block;
+  }
+  .br-hidden-mobile {
+    display: none;
+  }
+  /* media for BR tag */
   /* Top banner */
-  .intro-banner {
+  .intro-banner__outer--rent {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .intro-banner__outer--sale {
+    padding-top: 28px;
+    padding-bottom: 40px;
+  }
+  .intro-banner--rent {
     padding: 80px 8px 56px;
   }
-  .intro-banner__title {
+  .intro-banner--rent .intro-banner__title {
     font-size: 23px;
   }
-  .intro-banner__text {
+  .intro-banner--rent .intro-banner__text {
     font-size: 12px;
     margin-top: 38px;
   }
-  .intro-banner__text + .intro-banner__text {
+  .intro-banner--rent .intro-banner__text + .intro-banner__text {
     margin-top: 16px;
+  }
+  .intro-banner--sale {
+    background-image: url('../images/sale/sale-banner-mobile.jpg');
+    background-color: #F4F6FB;
+    background-size: auto;
+    border-radius: 14px;
+    padding: 0 10px;
+    min-height: 372px;
+  }
+  .intro-banner--sale .intro-banner__title {
+    font-size: 23px;
+    line-height: 1.52;
+  }
+  .intro-banner--sale .intro-banner__text {
+    font-size: 12px;
+    line-height: 1.67;
+    margin-top: 19px;
   }
   /* Top banner */
   /* How does this work? */
@@ -261,6 +379,9 @@
   .what-price__outer {
     padding-bottom: 38px;
   }
+  .what-price__inner--sale {
+    border: none;
+  }
   .what-price__line {
     display: grid;
     grid-template-columns: 1fr;
@@ -272,6 +393,58 @@
   .what-price__line:nth-child(2) {
     border-radius: 14px 14px 0 0;
   }
+  .what-price__line--sale {
+    border-left: 1px solid rgba(213, 225, 225, 0.4);
+    border-right: 1px solid rgba(213, 225, 225, 0.4);
+  }
+  .what-price__line--sale:nth-child(1n) {
+    background-color: #FFFFFF;
+  }
+  .what-price__line--sale:nth-child(2n + 1) {
+    background-color: #F4FAFB;
+  }
+  .what-price__line--sale:nth-child(2) {
+    display: none;
+  }
+  .what-price__line--sale:nth-child(3) {
+    border-radius: 14px 14px 0 0;
+    border-top: 1px solid rgba(213, 225, 225, 0.4);
+  }
+  .what-price__line--sale:nth-child(9) {
+    border-radius: 0 0 14px 14px;
+    border-bottom: 1px solid rgba(213, 225, 225, 0.4);
+  }
+  .what-price__line--sale:nth-last-child(3) {
+    background-color: #FFFFFF;
+    border-radius: 14px 14px 0 0;
+    border-top: 1px solid rgba(213, 225, 225, 0.4);
+  }
+  .what-price__line--sale:nth-last-child(2) {
+    background-color: #F4FAFB;
+    border-radius: 0 0 14px 14px;
+    border-bottom: 1px solid rgba(213, 225, 225, 0.4);
+  }
+  .what-price__line--sale:nth-last-child(1) {
+    background-color: transparent;
+    border-left: none;
+    border-right: none;
+  }
+  .what-price__line--sale .what-price__text {
+    font-size: 16px;
+  }
+  .what-price__line--sale .what-price__text-sub {
+    font-size: 12px;
+  }
+  .what-price__line--sale .what-price__image {
+    width: 23px;
+    height: auto;
+  }
+  .what-price__line--sale .what-price__percentage-number {
+    font-size: 30px;
+  }
+  .what-price__line--sale .what-price__point {
+    border-left-color: rgba(213, 225, 225, 0.4);
+  }
   .what-price__point {
     display: none;
   }
@@ -280,6 +453,9 @@
     font-size: 15px;
     font-weight: 400;
     line-height: 1.4;
+  }
+  .what-price__text--hidden {
+    display: block;
   }
   .what-price__text-sub {
     font-size: 12px;
@@ -308,7 +484,35 @@
     font-weight: 400;
     line-height: 1.6;
   }
+  .what-price__mobile-title {
+    display: block;
+    margin-bottom: 16px;
+  }
+  .what-price__line + .what-price__mobile-title {
+    margin-top: 25px;
+  }
   /* What is the price */
+  /* free estimate */
+  .free-estimate__outer {
+    background-image: url('../images/sale/sale-form-mobile.jpg');
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .free-estimate__header {
+    font-size: 20px;
+  }
+  .free-estimate__content {
+    padding: 30px 28px 24px;
+  }
+  .free-estimate__grid {
+    grid-template-columns: 1fr;
+    gap: 24px 0;
+    width: 100%;
+  }
+  .free-estimate__grid-label {
+    display: none;
+  }
+  /* free estimate */
   /* We are close */
   .we-close__outer {
     padding-top: 50px;
@@ -381,7 +585,7 @@
 @media screen and (max-width: 639px) {
   /* Top banner */
   .intro-banner__outer {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
   /* Top banner */
 }

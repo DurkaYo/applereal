@@ -1,3 +1,12 @@
+/* media for BR tag */
+.br-show-tablet {
+  display: none;
+}
+.br-show-mobile {
+  display: none;
+}
+/* media for BR tag */
+
 /* Top banner */
 .intro-banner {
   overflow: hidden;
@@ -15,6 +24,10 @@
 
   &--rent {
     background-image: url('../images/rent/banner.jpg');
+  }
+
+  &--sale {
+    background-image: url(../images/sale/sale-banner-desktop.jpg);
   }
 
   &__outer {
@@ -190,6 +203,10 @@
     border: 1px solid #D5E1E1;
     background-color: #FFFFFF;
     border-radius: 24px;
+
+    &--sale {
+      overflow: hidden;
+    }
   }
 
   &__line {
@@ -208,6 +225,34 @@
     &:last-of-type {
       border-radius: 0 0 24px 24px;
     }
+
+    &--sale {
+      grid-template-columns: 1fr .245fr .245fr;
+
+      &:nth-child(1n) {
+        background-color: #FFFFFF;
+      }
+
+      &:nth-child(2n + 1) {
+        background-color: #F4FAFB;
+      }
+
+      &:nth-child(1) {
+        background-color: #FFFFFF;
+      }
+
+      &:nth-last-child(3) {
+        background-color: #FFFFFF;
+      }
+
+      &:nth-last-child(2) {
+        background-color: #F4FAFB;
+      }
+
+      &:nth-last-child(1) {
+        background-color: #FFFFFF;
+      }
+    }
   }
 
   &__text {
@@ -223,6 +268,13 @@
 
     &--title {
       font-weight: 600;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &--hidden {
+      display: none;
     }
 
     &-mobile {
@@ -236,6 +288,13 @@
     justify-content: center;
     align-items: center;
     border-left: 1px solid #D5E1E1;
+
+    &-label {
+      font-size: 22px;
+      line-height: 1.73;
+      font-weight: 600;
+      color: #000000;
+    }
 
     &--percentage {
       padding: 12px 0;
@@ -257,8 +316,8 @@
       font-size: 14px;
       font-weight: 600;
       position: relative;
-      top: -8px;
-      right: -2px;
+      top: -10px;
+      right: -4px;
     }
 
     &-text {
@@ -268,8 +327,73 @@
     }
   }
 
+  &__mobile-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;;
+    color: #000000;
+    display: none;
+  }
+
 }
 /* What is the price */
+
+/* free estimate */
+.free-estimate {
+
+  &__outer {
+    padding-top: 186px;
+    padding-bottom: 186px;
+    background: transparent url('../images/sale/sale-form-desktop.jpg') no-repeat top center;
+    background-size: cover;
+  }
+
+  &__inner {
+    background-color: #FFFFFF;
+    border: 1px solid #E8EEED;
+    border-radius: 16px;
+  }
+
+  &__header {
+    color: #FFFFFF;
+    font-size: 32px;
+    line-height: 1.4;
+    background-color: #2C5352;
+    border-radius: 16px 16px 0 0;
+    padding-top: 34px;
+    padding-bottom: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__content {
+    padding: 40px 48px;
+    border-radius: 0 0 16px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px 24px;
+
+    &-btn {
+      height: 48px;
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+  }
+
+}
+/* free estimate */
 
 /* We are close */
 .we-close {
@@ -465,6 +589,10 @@
     color: rgba(0, 0, 0, 0.61);
     margin: 24px 0 0 0;
     padding: 0;
+
+    &--normal {
+      font-weight: 400;
+    }
   }
 }
 /* Header line */

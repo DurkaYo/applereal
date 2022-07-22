@@ -1,3 +1,11 @@
+/* media for BR tag */
+.br-show-tablet {
+  display: none;
+}
+.br-show-mobile {
+  display: none;
+}
+/* media for BR tag */
 /* Top banner */
 .intro-banner {
   overflow: hidden;
@@ -15,6 +23,9 @@
 }
 .intro-banner--rent {
   background-image: url('../images/rent/banner.jpg');
+}
+.intro-banner--sale {
+  background-image: url(../images/sale/sale-banner-desktop.jpg);
 }
 .intro-banner__outer {
   padding-top: 48px;
@@ -147,6 +158,9 @@
   background-color: #FFFFFF;
   border-radius: 24px;
 }
+.what-price__inner--sale {
+  overflow: hidden;
+}
 .what-price__line {
   display: grid;
   grid-template-columns: 1fr 0.245fr;
@@ -161,6 +175,27 @@
 .what-price__line:last-of-type {
   border-radius: 0 0 24px 24px;
 }
+.what-price__line--sale {
+  grid-template-columns: 1fr 0.245fr 0.245fr;
+}
+.what-price__line--sale:nth-child(1n) {
+  background-color: #FFFFFF;
+}
+.what-price__line--sale:nth-child(2n + 1) {
+  background-color: #F4FAFB;
+}
+.what-price__line--sale:nth-child(1) {
+  background-color: #FFFFFF;
+}
+.what-price__line--sale:nth-last-child(3) {
+  background-color: #FFFFFF;
+}
+.what-price__line--sale:nth-last-child(2) {
+  background-color: #F4FAFB;
+}
+.what-price__line--sale:nth-last-child(1) {
+  background-color: #FFFFFF;
+}
 .what-price__text {
   padding: 25px 40px;
   font-size: 22px;
@@ -173,6 +208,12 @@
 }
 .what-price__text--title {
   font-weight: 600;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.what-price__text--hidden {
+  display: none;
 }
 .what-price__text-mobile {
   display: none;
@@ -183,6 +224,12 @@
   justify-content: center;
   align-items: center;
   border-left: 1px solid #D5E1E1;
+}
+.what-price__point-label {
+  font-size: 22px;
+  line-height: 1.73;
+  font-weight: 600;
+  color: #000000;
 }
 .what-price__point--percentage {
   padding: 12px 0;
@@ -201,15 +248,68 @@
   font-size: 14px;
   font-weight: 600;
   position: relative;
-  top: -8px;
-  right: -2px;
+  top: -10px;
+  right: -4px;
 }
 .what-price__percentage-text {
   font-size: 12px;
   font-weight: 400;
   line-height: 2;
 }
+.what-price__mobile-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  display: none;
+}
 /* What is the price */
+/* free estimate */
+.free-estimate__outer {
+  padding-top: 186px;
+  padding-bottom: 186px;
+  background: transparent url('../images/sale/sale-form-desktop.jpg') no-repeat top center;
+  background-size: cover;
+}
+.free-estimate__inner {
+  background-color: #FFFFFF;
+  border: 1px solid #E8EEED;
+  border-radius: 16px;
+}
+.free-estimate__header {
+  color: #FFFFFF;
+  font-size: 32px;
+  line-height: 1.4;
+  background-color: #2C5352;
+  border-radius: 16px 16px 0 0;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.free-estimate__content {
+  padding: 40px 48px;
+  border-radius: 0 0 16px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.free-estimate__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px 24px;
+}
+.free-estimate__grid-btn {
+  height: 48px;
+  width: 100%;
+  border-radius: 8px;
+}
+.free-estimate__grid * {
+  box-sizing: border-box;
+}
+/* free estimate */
 /* We are close */
 .we-close__outer {
   padding-top: 119px;
@@ -364,6 +464,9 @@
   color: rgba(0, 0, 0, 0.61);
   margin: 24px 0 0 0;
   padding: 0;
+}
+.header-line__sub-title--normal {
+  font-weight: 400;
 }
 /* Header line */
 /*# sourceMappingURL=new.css.map */
