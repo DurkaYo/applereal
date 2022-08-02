@@ -11,6 +11,20 @@
   .what-price__text--sale {
     font-size: 16px;
   }
+  .what-price__tile-details__footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 25px;
+    margin-top: 25px;
+    padding: 0;
+  }
+  .what-price__tile-details__footer-price {
+    justify-content: center;
+  }
+  .what-price__tile-details__footer-button {
+    justify-content: center;
+  }
   /* What is the price */
 }
 @media screen and (max-width: 1023px) {
@@ -18,13 +32,17 @@
   .br-show-tablet {
     display: block;
   }
+  .br-hidden-tablet {
+    display: none;
+  }
   /* media for BR tag */
   /* Top banner */
   .intro-banner__outer--rent {
     padding-top: 62px;
     padding-bottom: 36px;
   }
-  .intro-banner__outer--sale {
+  .intro-banner__outer--sale,
+  .intro-banner__outer--management {
     padding-top: 49px;
     padding-bottom: 68px;
   }
@@ -48,23 +66,36 @@
     font-size: 16px;
     line-height: 1.62;
   }
-  .intro-banner--sale {
-    background-image: url('../images/sale/sale-banner-tablet.jpg');
+  .intro-banner--sale,
+  .intro-banner--management {
     padding: 0 15px;
     min-height: 369px;
   }
-  .intro-banner--sale .intro-banner__inner {
+  .intro-banner--sale .intro-banner__inner,
+  .intro-banner--management .intro-banner__inner {
     margin-left: 0;
   }
-  .intro-banner--sale .intro-banner__title {
+  .intro-banner--sale .intro-banner__title,
+  .intro-banner--management .intro-banner__title {
     font-size: 32px;
     line-height: 1.41;
   }
-  .intro-banner--sale .intro-banner__title--accent {
+  .intro-banner--sale .intro-banner__title--accent,
+  .intro-banner--management .intro-banner__title--accent {
     color: #000000;
   }
-  .intro-banner--sale .intro-banner__text {
+  .intro-banner--sale .intro-banner__text,
+  .intro-banner--management .intro-banner__text {
     margin-top: 25px;
+  }
+  .intro-banner--sale {
+    background-image: url('../images/sale/sale-banner-tablet.jpg');
+  }
+  .intro-banner--management {
+    background-image: url('../images/management/management-banner-tablet.jpg');
+  }
+  .intro-banner--management .intro-banner__inner--management {
+    padding-top: 60px;
   }
   /* Top banner */
   /* How does this work? */
@@ -93,6 +124,9 @@
   }
   .does-work__checking-footer > * {
     width: 50%;
+  }
+  .does-work--management {
+    grid-template-columns: repeat(1, 1fr);
   }
   /* How does this work? */
   /* why are we? */
@@ -123,6 +157,10 @@
   /* why are we? */
   /* What is the price */
   .what-price__outer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .what-price__outer--management {
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -168,6 +206,40 @@
   .what-price__text {
     padding: 25px;
   }
+  .what-price__tile {
+    padding: 30px;
+  }
+  .what-price__tile + .what-price__tile {
+    margin-top: 18px;
+  }
+  .what-price__tile-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 25px 0;
+  }
+  .what-price__tile-description__title {
+    font-size: 26px;
+  }
+  .what-price__tile-description__subtitle {
+    font-size: 20px;
+  }
+  .what-price__tile-details {
+    max-width: none;
+  }
+  .what-price__tile-details__footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 30px;
+    padding: 0 50px;
+  }
+  .what-price__tile-details__footer-price {
+    justify-content: flex-start;
+  }
+  .what-price__tile-details__footer-button {
+    justify-content: flex-end;
+  }
   /* What is the price */
   /* free estimate */
   .free-estimate__outer {
@@ -211,6 +283,18 @@
     max-width: none;
   }
   /* We are close */
+  /* Frequently asked Questions */
+  .management-questions__outer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .management-questions__item-header {
+    font-size: 20px;
+  }
+  .management-questions__item-content {
+    font-size: 16px;
+  }
+  /* Frequently asked Questions */
   /* We are also ready */
   .we-ready__outer {
     padding-top: 50px;
@@ -244,15 +328,26 @@
   /* bottom feedback form */
   /* Tile counter */
   .tile-counter {
-    padding: 25px;
+    padding: 20px;
   }
   .tile-counter__title {
     font-size: 18px;
     line-height: 1.5;
     margin-top: 20px;
   }
+  .tile-counter__title--big {
+    font-size: 26px;
+    margin-top: 0;
+  }
   .tile-counter__text {
     font-size: 16px;
+  }
+  .tile-counter__text--big {
+    font-size: 20px;
+    margin-top: 25px;
+  }
+  .tile-counter__list-item {
+    font-size: 18px;
   }
   .tile-counter__number {
     width: 80px;
@@ -263,10 +358,39 @@
     grid-column: span 1;
     background-image: url('../images/rent/advertise-tablet.jpeg');
   }
+  .tile-counter--search-for-tenants {
+    background-image: url('../images/management/search-for-tenants-tablet.jpg');
+    min-height: 585px;
+  }
+  .tile-counter--tenant {
+    background-image: url('../images/management/tenant-tablet.jpg');
+    background-position: right center;
+    min-height: 201px;
+  }
+  .tile-counter--yield {
+    background-image: url('../images/management/benefits-tablet.svg');
+    background-position: bottom 22px center;
+    background-size: calc(100% - 40px) auto;
+    min-height: 382px;
+  }
+  .tile-counter--expertise {
+    background-image: url('../images/management/expertise-tablet.jpg');
+    min-height: 201px;
+  }
+  .tile-counter--technical {
+    background-image: url('../images/management/does-work-technical-tablet.jpg');
+    background-position: center right -20px;
+  }
   .tile-counter--checking {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     padding: 0;
+  }
+  .tile-counter--horizontal-two {
+    grid-column: span 1;
+  }
+  .tile-counter--vertical-two {
+    grid-row: span 1;
   }
   /* Tile counter */
   /* Header line */
@@ -299,7 +423,8 @@
     padding-top: 36px;
     padding-bottom: 36px;
   }
-  .intro-banner__outer--sale {
+  .intro-banner__outer--sale,
+  .intro-banner__outer--management {
     padding-top: 28px;
     padding-bottom: 40px;
   }
@@ -316,22 +441,31 @@
   .intro-banner--rent .intro-banner__text + .intro-banner__text {
     margin-top: 16px;
   }
-  .intro-banner--sale {
-    background-image: url('../images/sale/sale-banner-mobile.jpg');
+  .intro-banner--sale,
+  .intro-banner--management {
     background-color: #F4F6FB;
     background-size: auto;
     border-radius: 14px;
     padding: 0 10px;
     min-height: 372px;
   }
-  .intro-banner--sale .intro-banner__title {
+  .intro-banner--sale .intro-banner__title,
+  .intro-banner--management .intro-banner__title {
     font-size: 23px;
     line-height: 1.52;
   }
-  .intro-banner--sale .intro-banner__text {
+  .intro-banner--sale .intro-banner__text,
+  .intro-banner--management .intro-banner__text {
     font-size: 12px;
     line-height: 1.67;
     margin-top: 19px;
+  }
+  .intro-banner--sale {
+    background-image: url('../images/sale/sale-banner-mobile.jpg');
+  }
+  .intro-banner--management {
+    background-image: url('../images/management/management-banner-tablet.jpg');
+    background-position: right 60% top 0;
   }
   /* Top banner */
   /* How does this work? */
@@ -378,6 +512,10 @@
   /* What is the price */
   .what-price__outer {
     padding-bottom: 38px;
+  }
+  .what-price__outer--management {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   .what-price__inner--sale {
     border: none;
@@ -491,6 +629,33 @@
   .what-price__line + .what-price__mobile-title {
     margin-top: 25px;
   }
+  .what-price-inner {
+    gap: 15px 0;
+  }
+  .what-price__tile {
+    padding: 25px 20px;
+    border-radius: 10px;
+  }
+  .what-price__tile-description__title {
+    font-size: 18px;
+  }
+  .what-price__tile-description__subtitle {
+    font-size: 16px;
+  }
+  .what-price__tile-details__footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 25px;
+    margin-top: 25px;
+    padding: 0;
+  }
+  .what-price__tile-details__footer-price {
+    justify-content: center;
+  }
+  .what-price__tile-details__footer-button {
+    justify-content: center;
+  }
   /* What is the price */
   /* free estimate */
   .free-estimate__outer {
@@ -531,6 +696,34 @@
     margin-top: 14px;
   }
   /* We are close */
+  /* Frequently asked Questions */
+  .management-questions__outer {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .management-questions__item-header {
+    font-size: 15px;
+    padding: 15px;
+  }
+  .management-questions__item-header:after {
+    min-width: 18px;
+    width: 18px;
+    height: 18px;
+  }
+  .management-questions__item-header__text {
+    max-width: 85%;
+    flex: auto;
+  }
+  .management-questions__item-content {
+    font-size: 14px;
+  }
+  .management-questions__item-content__inner {
+    padding: 0 15px 0;
+  }
+  .management-questions__item-input:checked + .management-questions__item-header + .management-questions__item-content .management-questions__item-content__inner {
+    padding-bottom: 15px;
+  }
+  /* Frequently asked Questions */
   /* We are also ready */
   .we-ready__outer {
     padding-top: 40px;
@@ -567,9 +760,46 @@
   }
   /* bottom feedback form */
   /* Tile counter */
+  .tile-counter__title--big {
+    font-size: 18px;
+    margin-top: 0;
+  }
+  .tile-counter__text--big {
+    font-size: 16px;
+    margin-top: 16px;
+  }
+  .tile-counter__list-item {
+    font-size: 16px;
+    margin-top: 16px;
+    padding-left: 34px;
+  }
+  .tile-counter__list-item:before {
+    width: 18px;
+    height: 18px;
+  }
   .tile-counter--checking {
     grid-template-columns: 1fr;
     grid-column: span 1;
+  }
+  .tile-counter--search-for-tenants {
+    background-image: url('../images/management/search-for-tenants-mobile.jpg');
+    min-height: 500px;
+  }
+  .tile-counter--tenant {
+    background-image: url('../images/management/tenant-mobile.jpg');
+    min-height: auto;
+  }
+  .tile-counter--yield {
+    background-image: url('../images/management/benefits-mobile.svg');
+    background-position: bottom 20px center;
+    min-height: 255px;
+  }
+  .tile-counter--expertise {
+    background-image: url('../images/management/expertise-mobile.jpg');
+    min-height: 201px;
+  }
+  .tile-counter--technical {
+    background-image: none;
   }
   /* Tile counter */
   /* Header line */
@@ -588,5 +818,13 @@
     padding-bottom: 40px;
   }
   /* Top banner */
+}
+@media screen and (max-width: 480px) {
+  /* Tile counter */
+  .tile-counter--tenant {
+    background-position: right -20px center;
+    background-size: 110% auto;
+  }
+  /* Tile counter */
 }
 /*# sourceMappingURL=media.css.map */

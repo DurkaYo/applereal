@@ -24,6 +24,26 @@
         font-size: 16px;
       }
     }
+
+    &__tile {
+      &-details {
+        &__footer {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+          gap: 25px;
+          margin-top: 25px;
+          padding: 0;
+
+          &-price {
+            justify-content: center;
+          }
+          &-button {
+            justify-content: center;
+          }
+        }
+      }
+    }
   }
   /* What is the price */
 }
@@ -33,6 +53,9 @@
   /* media for BR tag */
   .br-show-tablet {
     display: block;
+  }
+  .br-hidden-tablet {
+    display: none;
   }
   /* media for BR tag */
 
@@ -45,7 +68,7 @@
         padding-bottom: 36px;
       }
 
-      &--sale {
+      &--sale, &--management {
         padding-top: 49px;
         padding-bottom: 68px;
       }
@@ -78,8 +101,7 @@
       }
     }
 
-    &--sale {
-      background-image: url('../images/sale/sale-banner-tablet.jpg');
+    &--sale, &--management {
       padding: 0 15px;
       min-height: 369px;
 
@@ -100,6 +122,22 @@
 
         &__text {
           margin-top: 25px;
+        }
+      }
+    }
+
+    &--sale {
+      background-image: url('../images/sale/sale-banner-tablet.jpg');
+    }
+
+    &--management {
+      background-image: url('../images/management/management-banner-tablet.jpg');
+
+      .intro-banner {
+        &__inner {
+          &--management {
+            padding-top: 60px;
+          }
         }
       }
     }
@@ -141,6 +179,10 @@
         }
       }
 
+    }
+
+    &--management {
+      grid-template-columns: repeat(1, 1fr);
     }
 
   }
@@ -191,6 +233,11 @@
     &__outer {
       padding-top: 50px;
       padding-bottom: 50px;
+
+      &--management {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
     }
 
     &__inner {
@@ -247,6 +294,48 @@
 
     &__text {
       padding: 25px;
+    }
+
+    &__tile {
+      padding: 30px;
+
+      & + .what-price__tile {
+        margin-top: 18px;
+      }
+
+      &-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 25px 0;
+      }
+
+      &-description {
+        &__title {
+          font-size: 26px;
+        }
+        &__subtitle {
+          font-size: 20px;
+        }
+      }
+
+      &-details {
+        max-width: none;
+
+        &__footer {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+          margin-top: 30px;
+          padding: 0 50px;
+          &-price {
+            justify-content: flex-start;
+          }
+          &-button {
+            justify-content: flex-end;
+          }
+        }
+      }
     }
   }
   /* What is the price */
@@ -309,6 +398,29 @@
   }
   /* We are close */
 
+  /* Frequently asked Questions */
+  .management-questions {
+
+    &__outer {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    &__item {
+
+      &-header {
+        font-size: 20px;
+      }
+
+      &-content {
+        font-size: 16px;
+      }
+
+    }
+
+  }
+  /* Frequently asked Questions */
+
   /* We are also ready */
   .we-ready {
     &__outer {
@@ -356,16 +468,32 @@
 
   /* Tile counter */
   .tile-counter {
-    padding: 25px;
+    padding: 20px;
 
     &__title {
       font-size: 18px;
       line-height: 1.5;
       margin-top: 20px;
+
+      &--big {
+        font-size: 26px;
+        margin-top: 0;
+      }
     }
 
     &__text {
       font-size: 16px;
+
+      &--big {
+        font-size: 20px;
+        margin-top: 25px;
+      }
+    }
+
+    &__list {
+      &-item {
+        font-size: 18px;
+      }
     }
 
     &__number {
@@ -379,10 +507,46 @@
       background-image: url('../images/rent/advertise-tablet.jpeg');
     }
 
+    &--search-for-tenants {
+      background-image: url('../images/management/search-for-tenants-tablet.jpg');
+      min-height: 585px;
+    }
+
+    &--tenant {
+      background-image: url('../images/management/tenant-tablet.jpg');
+      background-position: right center;
+      min-height: 201px;
+    }
+
+    &--yield {
+      background-image: url('../images/management/benefits-tablet.svg');
+      background-position: bottom 22px center;
+      background-size: calc(100% - 40px) auto;
+      min-height: 382px;
+    }
+
+    &--expertise {
+      background-image: url('../images/management/expertise-tablet.jpg');
+      min-height: 201px;
+    }
+
+    &--technical {
+      background-image: url('../images/management/does-work-technical-tablet.jpg');
+      background-position: center right -20px;
+    }
+
     &--checking {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto;
       padding: 0;
+    }
+
+    &--horizontal-two {
+      grid-column: span 1;
+    }
+
+    &--vertical-two {
+      grid-row: span 1;
     }
 
   }
@@ -434,7 +598,7 @@
         padding-bottom: 36px;
       }
 
-      &--sale {
+      &--sale, &--management {
         padding-top: 28px;
         padding-bottom: 40px;
       }
@@ -459,8 +623,7 @@
       }
     }
 
-    &--sale {
-      background-image: url('../images/sale/sale-banner-mobile.jpg');
+    &--sale, &--management {
       background-color: #F4F6FB;
       background-size: auto;
       border-radius: 14px;
@@ -479,6 +642,15 @@
           margin-top: 19px;
         }
       }
+    }
+
+    &--sale {
+      background-image: url('../images/sale/sale-banner-mobile.jpg');
+    }
+
+    &--management {
+      background-image: url('../images/management/management-banner-tablet.jpg');
+      background-position: right 60% top 0;
     }
 
   }
@@ -552,6 +724,11 @@
 
     &__outer {
       padding-bottom: 38px;
+
+      &--management {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
     }
 
     &__inner {
@@ -700,6 +877,43 @@
         margin-top: 25px;
       }
     }
+
+    &-inner {
+      gap: 15px 0;
+    }
+
+    &__tile {
+      padding: 25px 20px;
+      border-radius: 10px;
+
+      &-description {
+        &__title {
+          font-size: 18px;
+        }
+        &__subtitle {
+          font-size: 16px;
+        }
+      }
+
+      &-details {
+
+        &__footer {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+          gap: 25px;
+          margin-top: 25px;
+          padding: 0;
+
+          &-price {
+            justify-content: center;
+          }
+          &-button {
+            justify-content: center;
+          }
+        }
+      }
+    }
   }
   /* What is the price */
 
@@ -760,6 +974,57 @@
   }
   /* We are close */
 
+  /* Frequently asked Questions */
+  .management-questions {
+
+    &__outer {
+      padding-top: 35px;
+      padding-bottom: 35px;
+    }
+
+    &__item {
+
+      &-header {
+        font-size: 15px;
+        padding: 15px;
+
+        &:after {
+          min-width: 18px;
+          width: 18px;
+          height: 18px;
+        }
+
+        &__text {
+          max-width: 85%;
+          flex: auto;
+        }
+      }
+
+      &-content {
+        font-size: 14px;
+
+        &__inner {
+          padding: 0 15px 0;
+        }
+      }
+
+      &-input {
+        &:checked {
+          & + .management-questions__item-header {
+            & + .management-questions__item-content {
+              .management-questions__item-content__inner {
+                padding-bottom: 15px;
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+  /* Frequently asked Questions */
+
   /* We are also ready */
   .we-ready {
     &__outer {
@@ -811,9 +1076,62 @@
 
   /* Tile counter */
   .tile-counter {
+
+    &__title {
+      &--big {
+        font-size: 18px;
+        margin-top: 0;
+      }
+    }
+
+    &__text {
+      &--big {
+        font-size: 16px;
+        margin-top: 16px;
+      }
+    }
+
+    &__list {
+      &-item {
+        font-size: 16px;
+        margin-top: 16px;
+        padding-left: 34px;
+
+        &:before {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
     &--checking {
       grid-template-columns: 1fr;
       grid-column: span 1;
+    }
+
+    &--search-for-tenants {
+      background-image: url('../images/management/search-for-tenants-mobile.jpg');
+      min-height: 500px;
+    }
+
+    &--tenant {
+      background-image: url('../images/management/tenant-mobile.jpg');
+      min-height: auto;
+    }
+
+    &--yield {
+      background-image: url('../images/management/benefits-mobile.svg');
+      background-position: bottom 20px center;
+      min-height: 255px;
+    }
+
+    &--expertise {
+      background-image: url('../images/management/expertise-mobile.jpg');
+      min-height: 201px;
+    }
+
+    &--technical {
+      background-image: none;
     }
   }
   /* Tile counter */
@@ -839,4 +1157,15 @@
     }
   }
   /* Top banner */
+}
+
+@media screen and (max-width: 480px) {
+  /* Tile counter */
+  .tile-counter {
+    &--tenant {
+      background-position: right -20px center;
+      background-size: 110% auto;
+    }
+  }
+  /* Tile counter */
 }
