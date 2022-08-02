@@ -27,6 +27,11 @@
 .intro-banner--sale {
   background-image: url(../images/sale/sale-banner-desktop.jpg);
 }
+.intro-banner--management {
+  background-image: url('../images/management/management-banner-desktop.jpg');
+  align-items: flex-start;
+  padding-top: 130px;
+}
 .intro-banner__outer {
   padding-top: 48px;
   padding-bottom: 58px;
@@ -34,6 +39,9 @@
 .intro-banner__inner {
   max-width: 600px;
   margin-left: 104px;
+}
+.intro-banner__inner--management {
+  max-width: 700px;
 }
 .intro-banner__title {
   font-size: 34px;
@@ -63,6 +71,9 @@
   padding-top: 130px;
   padding-bottom: 184px;
   box-shadow: inset 0px -30px 104px -100px #B2BCC2, inset 0px 60px 104px -100px #B2BCC2;
+}
+.does-work__outer--white {
+  box-shadow: none;
 }
 .does-work__checking-point {
   display: flex;
@@ -104,6 +115,15 @@
   gap: 24px;
   padding-top: 58px;
   padding-bottom: 58px;
+}
+.does-work--management {
+  grid-template-columns: repeat(2, 1fr);
+}
+.does-work--management .tile-counter__title {
+  margin-top: 0;
+}
+.does-work__technical {
+  max-width: 585px;
 }
 /* How does this work? */
 /* why are we? */
@@ -152,6 +172,10 @@
 .what-price__outer {
   padding-top: 175px;
   padding-bottom: 175px;
+}
+.what-price__outer--management {
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
 .what-price__inner {
   border: 1px solid #D5E1E1;
@@ -263,6 +287,61 @@
   color: #000000;
   display: none;
 }
+.what-price__tile {
+  background-color: #F4F6FB;
+  border-radius: 20px;
+  padding: 60px;
+}
+.what-price__tile + .what-price__tile {
+  margin-top: 40px;
+}
+.what-price__tile-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0 20px;
+}
+.what-price__tile-description__title {
+  font-size: 28px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #000000;
+}
+.what-price__tile-description__subtitle {
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: #000000;
+  margin-top: 23px;
+}
+.what-price__tile-details {
+  flex: 1 0 auto;
+  max-width: 48%;
+}
+.what-price__tile-details .tile-counter__list {
+  margin-top: 0;
+}
+.what-price__tile-details__footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 35px;
+  padding: 0 50px;
+}
+.what-price__tile-details__footer-price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: 700;
+  color: #000000;
+}
+.what-price__tile-details__footer-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 /* What is the price */
 /* free estimate */
 .free-estimate__outer {
@@ -344,6 +423,84 @@
   margin-top: 16px;
 }
 /* We are close */
+/* Frequently asked Questions */
+.management-questions__outer {
+  background-color: #F4F6FB;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+.management-questions__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 15px 0;
+}
+.management-questions__item {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+.management-questions__item-input {
+  position: absolute;
+  left: -1000px;
+}
+.management-questions__item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 20px;
+  cursor: pointer;
+  padding: 30px 35px;
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #000000;
+  transition: color 0.2s linear, background-color 0.2s linear;
+}
+.management-questions__item-header__text {
+  flex: 1 0 auto;
+  max-width: 75%;
+}
+.management-questions__item-header:hover {
+  color: #2C5352;
+}
+.management-questions__item-header:after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  background: transparent url('../images/management/arrow-down.svg') no-repeat center center;
+  background-size: 100% auto;
+  transition: transform 0.2s linear;
+  transform-origin: center center;
+}
+.management-questions__item-content {
+  font-size: 23px;
+  font-weight: 500;
+  display: block;
+  transition: line-height 0.3s ease-in-out, color 0.5s ease-in-out;
+  line-height: 0;
+  overflow: hidden;
+  color: transparent;
+}
+.management-questions__item-content__inner {
+  display: block;
+  padding: 0 30px 0;
+}
+.management-questions__item-input:checked + .management-questions__item-header:after {
+  transform: rotate(180deg);
+}
+.management-questions__item-input:checked + .management-questions__item-header + .management-questions__item-content {
+  line-height: 1.35;
+  color: rgba(40, 40, 40, 0.8);
+}
+.management-questions__item-input:checked + .management-questions__item-header + .management-questions__item-content .management-questions__item-content__inner {
+  padding-bottom: 35px;
+}
+/* Frequently asked Questions */
 /* We are also ready */
 .we-ready__outer {
   padding-top: 96px;
@@ -392,6 +549,9 @@
   font-size: 22px;
   background-color: #FFFFFF;
 }
+.bottom-feedback__field--input-grey {
+  background-color: #F4F6FB;
+}
 /* bottom feedback form */
 /* Tile counter */
 .tile-counter {
@@ -399,6 +559,10 @@
   background-color: #FFFFFF;
   border-radius: 20px;
   box-shadow: 0 0 17px rgba(0, 0, 0, 0.04);
+  text-decoration: none;
+}
+.tile-counter--blue-light {
+  background-color: #E9F5F6;
 }
 .tile-counter__title {
   font-size: 22px;
@@ -407,12 +571,47 @@
   color: #000000;
   margin-top: 32px;
 }
+.tile-counter__title--big {
+  font-size: 28px;
+  line-height: 1.2;
+}
 .tile-counter__text {
   font-size: 20px;
   font-weight: 500;
   line-height: 1.65;
   color: rgba(40, 40, 40, 0.8);
   margin-top: 12px;
+}
+.tile-counter__text--big {
+  font-size: 23px;
+  line-height: 1.35;
+  margin-top: 25px;
+}
+.tile-counter__list {
+  padding: 0;
+  margin: 25px 0 0;
+}
+.tile-counter__list-item {
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #2C5352;
+  padding-left: 42px;
+  position: relative;
+  list-style: none;
+}
+.tile-counter__list-item + .tile-counter__list-item {
+  margin-top: 17px;
+}
+.tile-counter__list-item:before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  background: transparent url('../images/management/point.svg');
+  background-size: 100% auto;
 }
 .tile-counter--advertise {
   grid-column: span 2;
@@ -422,6 +621,30 @@
 }
 .tile-counter--advertise .tile-counter__text {
   max-width: 450px;
+}
+.tile-counter--search-for-tenants {
+  background: transparent url('../images/management/search-for-tenants-desktop.jpg') no-repeat bottom center;
+  background-size: cover;
+  min-height: 784px;
+}
+.tile-counter--tenant {
+  background: transparent url('../images/management/tenant-desktop.jpg') no-repeat bottom center;
+  background-size: cover;
+  min-height: 682px;
+}
+.tile-counter--yield {
+  background: #F4F6FB url('../images/management/benefits-desktop.svg') no-repeat bottom 84px center;
+  background-size: 100% auto;
+  min-height: 682px;
+}
+.tile-counter--expertise {
+  border: 1px solid #E9F5F6;
+  background: #FFFFFF url('../images/management/expertise-desktop.jpg') no-repeat center right;
+  background-size: cover;
+  min-height: 288px;
+}
+.tile-counter--technical {
+  background: #FFFFFF url('../images/management/does-work-technical-desktop.jpg') no-repeat center right -120px;
 }
 .tile-counter--checking {
   display: grid;
@@ -435,6 +658,12 @@
 }
 .tile-counter--checking .tile-counter__text {
   max-width: 600px;
+}
+.tile-counter--horizontal-two {
+  grid-column: span 2;
+}
+.tile-counter--vertical-two {
+  grid-row: span 2;
 }
 .tile-counter__number {
   font-size: 40px;
@@ -451,6 +680,12 @@
 }
 .tile-counter__number--reverse {
   background-color: #FFFFFF;
+}
+a.tile-counter {
+  transition: background-color 0.2s linear;
+}
+a.tile-counter:hover {
+  background-color: #e5eded;
 }
 /* Tile counter */
 /* Header line */

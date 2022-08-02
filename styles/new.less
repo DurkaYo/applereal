@@ -30,6 +30,12 @@
     background-image: url(../images/sale/sale-banner-desktop.jpg);
   }
 
+  &--management {
+    background-image: url('../images/management/management-banner-desktop.jpg');
+    align-items: flex-start;
+    padding-top: 130px;
+  }
+
   &__outer {
     padding-top: 48px;
     padding-bottom: 58px;
@@ -38,6 +44,10 @@
   &__inner {
     max-width: 600px;
     margin-left: 104px;
+
+    &--management {
+      max-width: 700px;
+    }
   }
 
   &__title {
@@ -69,6 +79,10 @@
     padding-top: 130px;
     padding-bottom: 184px;
     box-shadow: inset 0px -30px 104px -100px #B2BCC2, inset 0px 60px 104px -100px #B2BCC2;
+
+    &--white {
+      box-shadow: none;
+    }
   }
 
   display: grid;
@@ -127,6 +141,19 @@
       padding-top: 58px;
       padding-bottom: 58px;
     }
+  }
+
+  &--management {
+    grid-template-columns: repeat(2, 1fr);
+
+    .tile-counter__title {
+      margin-top: 0;
+    }
+
+  }
+
+  &__technical {
+    max-width: 585px;
   }
 
 }
@@ -197,6 +224,11 @@
   &__outer {
     padding-top: 175px;
     padding-bottom: 175px;
+
+    &--management {
+      padding-top: 130px;
+      padding-bottom: 130px;
+    }
   }
 
   &__inner {
@@ -335,6 +367,75 @@
     display: none;
   }
 
+  &__tile {
+    background-color: #F4F6FB;
+    border-radius: 20px;
+    padding: 60px;
+
+    & + .what-price__tile {
+      margin-top: 40px;
+    }
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0 20px;
+    }
+
+    &-description {
+
+      &__title {
+        font-size: 28px;
+        line-height: 1.3;
+        font-weight: 600;
+        color: #000000;
+      }
+
+      &__subtitle {
+        font-size: 22px;
+        line-height: 1.3;
+        font-weight: 500;
+        color: #000000;
+        margin-top: 23px;
+      }
+
+    }
+
+    &-details {
+      flex: 1 0 auto;
+      max-width: 48%;
+
+      .tile-counter__list {
+        margin-top: 0;
+      }
+
+      &__footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-top: 35px;
+        padding: 0 50px;
+
+        &-price {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          font-size: 32px;
+          line-height: 39px;
+          font-weight: 700;
+          color: #000000;
+        }
+
+        &-button {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+        }
+      }
+    }
+  }
+
 }
 /* What is the price */
 
@@ -440,6 +541,106 @@
 }
 /* We are close */
 
+/* Frequently asked Questions */
+.management-questions {
+
+  &__outer {
+    background-color: #F4F6FB;
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 15px 0;
+  }
+
+  &__item {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+
+    &-input {
+      position: absolute;
+      left: -1000px;
+    }
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0 20px;
+      cursor: pointer;
+      padding: 30px 35px;
+      font-size: 28px;
+      line-height: 1.4;
+      font-weight: 500;
+      color: #000000;
+      transition: color .2s linear, background-color .2s linear;
+
+      &__text {
+        flex: 1 0 auto;
+        max-width: 75%;
+      }
+
+      &:hover {
+        color: #2C5352;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        background: transparent url('../images/management/arrow-down.svg') no-repeat center center;
+        background-size: 100% auto;
+        transition: transform .2s linear;
+        transform-origin: center center;
+      }
+    }
+
+    &-content {
+      font-size: 23px;
+      font-weight: 500;
+      display: block;
+      transition: line-height .3s ease-in-out, color .5s ease-in-out;
+      line-height: 0;
+      overflow: hidden;
+      color: transparent;
+
+      &__inner {
+        display: block;
+        padding: 0 30px 0;
+      }
+    }
+
+    &-input {
+      &:checked {
+        & + .management-questions__item-header {
+          &:after {
+            transform: rotate(180deg);
+          }
+          & + .management-questions__item-content {
+            line-height: 1.35;
+            color: rgba(40, 40, 40, 0.8);
+
+            .management-questions__item-content__inner {
+              padding-bottom: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+/* Frequently asked Questions */
+
 /* We are also ready */
 .we-ready {
 
@@ -462,6 +663,8 @@
 
 }
 /* We are also ready */
+
+
 
 /* bottom feedback form */
 .bottom-feedback {
@@ -500,6 +703,10 @@
       height: 96px;
       font-size: 22px;
       background-color: #FFFFFF;
+
+      &-grey {
+        background-color: #F4F6FB;
+      }
     }
   }
 
@@ -513,6 +720,11 @@
   background-color: #FFFFFF;
   border-radius: 20px;
   box-shadow: 0 0 17px rgba(0, 0, 0, 0.04);
+  text-decoration: none;
+
+  &--blue-light {
+    background-color: #E9F5F6;
+  }
 
   &__title {
     font-size: 22px;
@@ -520,6 +732,11 @@
     line-height: 1.55;
     color: #000000;
     margin-top: 32px;
+
+    &--big {
+      font-size: 28px;
+      line-height: 1.2;
+    }
   }
 
   &__text {
@@ -528,6 +745,42 @@
     line-height: 1.65;
     color: rgba(40, 40, 40, 0.8);
     margin-top: 12px;
+
+    &--big {
+      font-size: 23px;
+      line-height: 1.35;
+      margin-top: 25px;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 25px 0 0;
+
+    &-item {
+      font-size: 20px;
+      line-height: 1.4;
+      font-weight: 600;
+      color: #2C5352;
+      padding-left: 42px;
+      position: relative;
+      list-style: none;
+
+      & + .tile-counter__list-item {
+        margin-top: 17px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 26px;
+        height: 26px;
+        background: transparent url('../images/management/point.svg');
+        background-size: 100% auto;
+      }
+    }
   }
 
   &--advertise {
@@ -539,6 +792,35 @@
     .tile-counter__text {
       max-width: 450px;
     }
+  }
+
+  &--search-for-tenants {
+    background: transparent url('../images/management/search-for-tenants-desktop.jpg') no-repeat bottom center;
+    background-size: cover;
+    min-height: 784px;
+  }
+
+  &--tenant {
+    background: transparent url('../images/management/tenant-desktop.jpg') no-repeat bottom center;
+    background-size: cover;
+    min-height: 682px;
+  }
+
+  &--yield {
+    background: #F4F6FB url('../images/management/benefits-desktop.svg') no-repeat bottom 84px center;
+    background-size: 100% auto;
+    min-height: 682px;
+  }
+
+  &--expertise {
+    border: 1px solid #E9F5F6;
+    background: #FFFFFF url('../images/management/expertise-desktop.jpg') no-repeat center right;
+    background-size: cover;
+    min-height: 288px;
+  }
+
+  &--technical {
+    background: #FFFFFF url('../images/management/does-work-technical-desktop.jpg') no-repeat center right -120px;
   }
 
   &--checking {
@@ -555,6 +837,14 @@
     .tile-counter__text {
       max-width: 600px;
     }
+  }
+
+  &--horizontal-two {
+    grid-column: span 2;
+  }
+
+  &--vertical-two {
+    grid-row: span 2;
   }
 
   &__number {
@@ -575,6 +865,12 @@
     }
   }
 
+}
+a.tile-counter {
+  transition: background-color .2s linear;
+  &:hover {
+    background-color: #e5eded;
+  }
 }
 /* Tile counter */
 
