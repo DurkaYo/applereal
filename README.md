@@ -15,8 +15,11 @@ html template to apple real
 * добавлена страница **управление**
 * так же обновлены стили
 * Элементы блока **Мы также готовы помочь по другим направлениям** теперь ссылки, собственно блок можно вставлять в любое место, если на странице уже есть обертка -- то можно удалять класс `.container`
+* на странице `management-other-bottom-section.html` пример другого блока **Мы также готовы помочь
+  по другим направлениям**
 
 ## Ссылки
 * [Страница аренды](https://durkayo.github.io/applereal/rent.html)
 * [Страница продажи](https://durkayo.github.io/applereal/sale.html)
 * [Страница управления](https://durkayo.github.io/applereal/management.html)
+* [Страница управления с другим нижним блоком](https://durkayo.github.io/applereal/management-other-bottom-section.html)
