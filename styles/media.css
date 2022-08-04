@@ -107,6 +107,10 @@
     padding-top: 50px;
     padding-bottom: 32px;
   }
+  .does-work__outer--white {
+    padding-top: 50px;
+    padding-bottom: 32px;
+  }
   .does-work__checking-header {
     padding: 25px;
     border-radius: 20px 0 0 20px;
@@ -347,7 +351,7 @@
     margin-top: 25px;
   }
   .tile-counter__list-item {
-    font-size: 18px;
+    font-size: 16px;
   }
   .tile-counter__number {
     width: 80px;
@@ -474,6 +478,10 @@
     gap: 20px;
   }
   .does-work__outer {
+    padding-bottom: 50px;
+  }
+  .does-work__outer--white {
+    padding-top: 50px;
     padding-bottom: 50px;
   }
   .does-work__checking-header {
@@ -769,7 +777,6 @@
     margin-top: 16px;
   }
   .tile-counter__list-item {
-    font-size: 16px;
     margin-top: 16px;
     padding-left: 34px;
   }
